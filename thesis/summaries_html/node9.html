@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Gradient-based learning applied to document recognition [33] </TITLE>
+<META NAME="description" CONTENT="Gradient-based learning applied to document recognition [33] ">
+<META NAME="keywords" CONTENT="summaries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summaries.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="summaries.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html393"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html389"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html383"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html391"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html394"
+  HREF="node10.html">Independent component analysis applied</A>
+<B> Up:</B> <A NAME="tex2html390"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html384"
+  HREF="node8.html">Convolutional networks for images,</A>
+ &nbsp; <B>  <A NAME="tex2html392"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html395"
+  HREF="node9.html#SECTION00091000000000000000">Original Abstract</A>
+<LI><A NAME="tex2html396"
+  HREF="node9.html#SECTION00092000000000000000">Main points</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00090000000000000000">
+Gradient-based learning applied to document recognition [<A
+ HREF="node55.html#LeCun1998">33</A>] </A>
+</H1>
+
+<H2><A NAME="SECTION00091000000000000000">
+Original Abstract</A>
+</H2>
+
+<P>
+<I>
+Multilayer neural networks trained with the back-propagation algorithm constitute the best example of a successful gradient based learning technique. Given an appropriate network architecture, gradient-based learning algorithms can be used to synthesize a complex decision surface that can classify high-dimensional patterns, such as handwritten characters, with minimal preprocessing. This paper reviews various methods applied to handwritten character recognition and compares them on a standard handwritten digit recognition task. Convolutional neural networks, which are specifically designed to deal with the variability of 2D shapes, are shown to outperform all other techniques. Real-life document recognition systems are composed of multiple modules including field extraction, segmentation recognition, and language modeling. A new learning paradigm, called graph transformer networks (GTN), allows such multimodule systems to be trained globally using gradient-based methods so as to minimize an overall performance measure. Two systems for online handwriting recognition are described. Experiments demonstrate the advantage of global training, and the flexibility of graph transformer networks. A graph transformer network for reading a bank cheque is also described. It uses convolutional neural network character recognizers combined with global training techniques to provide record accuracy on business and personal cheques. It is deployed commercially and reads several million cheques per day
+</I>
+
+<H2><A NAME="SECTION00092000000000000000">
+Main points</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>LeNet-5
+</LI>
+<LI>Clarification: In this paper ``stride'' is not mentioned, but as Krizhevsky2012
+    et.al. started using it, new implementations of CNN need to define its value.
+</LI>
+<LI>Conv: Convolutional layer
+</LI>
+<LI>Subs: Subsampling layer (summed * coefficient + bias)
+</LI>
+<LI>Full: Fully connected network
+</LI>
+<LI>ERBF: Euclidian Radial Basis Function units
+    
+<UL>
+<LI>input 32x32 pixel image (original images are 28x28)
+</LI>
+<LI>Conv1 :
+        
+<UL>
+<LI>6@28x28 filter 5x5
+</LI>
+<LI>stride 1
+</LI>
+<LI>Connections = <!-- MATH
+ $5*5*28*28*6 + 6*28*28 = 122,304$
+ -->
+</LI>
+<LI>Train. param. = <!-- MATH
+ $5*5*6 + 6 = 156$
+ -->
+</LI>
+</UL>
+</LI>
+<LI>Subs2 :
+        
+<UL>
+<LI>6@14x14 range 2x2
+</LI>
+<LI>stride 2
+</LI>
+<LI>Connections = <!-- MATH
+ $6*28*28 + 6*14*14 = 5,880$
+ -->
+</LI>
+<LI>Train. param. = coefficient + bias = <!-- MATH
+ $6 + 6 = 156$
+ -->
+</LI>
+</UL>
+</LI>
+<LI>Conv3 :
+        
+<UL>
+<LI>16@10x10 filter 5x5
+</LI>
+<LI>stride 1
+</LI>
+<LI>Connections <!-- MATH
+ $= 6*5*5*10*10*10 + 10*10*16 = 151,600$
+ -->
+</LI>
+<LI>Train. param. <!-- MATH
+ $= 5*5*3*6 + 5*5*4*9 + 5*5*6*1 + 16 = 1,516$
+ -->
+</LI>
+<LI>Note:
+</LI>
+<LI>This layer is not completly connected, see table 1 for specific connections
+</LI>
+<LI>Expected Connections <!-- MATH
+ $= 6*5*5*10*10*16 + 10*10*16 = 241,600$
+ -->
+</LI>
+<LI>Expected train. param <!-- MATH
+ $= 5*5*16*6 + 16 = 2416$
+ -->
+</LI>
+</UL>
+</LI>
+<LI>Subs4 :
+        
+<UL>
+<LI>16@5x5 range 2x2
+</LI>
+<LI>stride 2
+</LI>
+<LI>Connections <!-- MATH
+ $= 16*10*10 + 16*5*5 = 2,000$
+ -->
+</LI>
+<LI>Train. param. = coefficient + bias <!-- MATH
+ $= 16 + 16 = 32$
+ -->
+</LI>
+</UL>
+</LI>
+<LI>Conv5 :
+        
+<UL>
+<LI>120@1x1 filter 5x5
+</LI>
+<LI>stride 0
+</LI>
+<LI>Connections and train. param. <!-- MATH
+ $= 16*5*5*120 + 120 = 48,120$
+ -->
+</LI>
+</UL>
+</LI>
+<LI>Full6 : 84 Atanh(Sa)
+        
+<UL>
+<LI>Connections and train. param. <!-- MATH
+ $= 120*84 + 84 = 10,164$
+ -->
+</LI>
+</UL>
+</LI>
+<LI>ERBF7 : 10
+        
+<UL>
+<LI>Connections and train. param. = <!-- MATH
+ $84*10 = 840$
+ -->
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html393"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html389"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html383"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html391"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html394"
+  HREF="node10.html">Independent component analysis applied</A>
+<B> Up:</B> <A NAME="tex2html390"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html384"
+  HREF="node8.html">Convolutional networks for images,</A>
+ &nbsp; <B>  <A NAME="tex2html392"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Miquel Perello Nieto
+2014-05-14
+</ADDRESS>
+</BODY>
+</HTML>

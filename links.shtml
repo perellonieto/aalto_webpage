@@ -1,0 +1,13 @@
+<!--#set var="ics_type" value="personal" -->
+<!--#set var="root" value="/perellm1" -->
+<!--#include virtual="${root}/_group-preamble.shtml" -->
+<!--#set var="ics_title" value="Miquel Perello Nieto" -->
+<!--#set var="ics_maintainer" value="Miquel Perello Nieto" -->
+<!--#set var="ics_am_current_item" value="Links" -->
+<!--#set var="ics_aside_img_src" value="/style/2010/core/ics_aside_4.jpg" -->
+<!--#set var="ics_font_size" value="large" -->
+<!--#include virtual="/style/2010/ics_header.shtml" -->
+
+<h2>Links</h2>
+
+<!--#include virtual="/style/2010/ics_footer.shtml" -->

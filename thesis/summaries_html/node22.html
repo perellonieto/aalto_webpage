@@ -1,0 +1,250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Stacks of convolutional restricted Boltzmann machines for shift-invariant feature learning [38] </TITLE>
+<META NAME="description" CONTENT="Stacks of convolutional restricted Boltzmann machines for shift-invariant feature learning [38] ">
+<META NAME="keywords" CONTENT="summaries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summaries.css">
+
+<LINK REL="next" HREF="node23.html">
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="up" HREF="summaries.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html569"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html565"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html559"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html567"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html570"
+  HREF="node23.html">Evaluation of local spatio-temporal</A>
+<B> Up:</B> <A NAME="tex2html566"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html560"
+  HREF="node21.html">Learning Deep Architectures for</A>
+ &nbsp; <B>  <A NAME="tex2html568"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html571"
+  HREF="node22.html#SECTION000221000000000000000">Original Abstract</A>
+<LI><A NAME="tex2html572"
+  HREF="node22.html#SECTION000222000000000000000">Main points</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION000220000000000000000">
+Stacks of convolutional restricted Boltzmann machines for shift-invariant feature learning [<A
+ HREF="node55.html#Norouzi2009">38</A>] </A>
+</H1>
+
+<H2><A NAME="SECTION000221000000000000000">
+Original Abstract</A>
+</H2>
+
+<P>
+<I>
+In this paper we present a method for learning class-specific features for recognition. Recently a greedy layer-wise procedure was proposed to initialize weights of deep belief networks, by viewing each layer as a separate restricted Boltzmann machine (RBM). We develop the convolutional RBM (C-RBM), a variant of the RBM model in which weights are shared to respect the spatial structure of images. This framework learns a set of features that can generate the images of a specific object class. Our feature extraction model is a four layer hierarchy of alternating filtering and maximum subsampling. We learn feature parameters of the first and third layers viewing them as separate C-RBMs. The outputs of our feature extraction hierarchy are then fed as input to a discriminative classifier. It is experimentally demonstrated that the extracted features are effective for object detection, using them to obtain performance comparable to the state of the art on handwritten digit recognition and pedestrian detection.
+</I>
+
+<H2><A NAME="SECTION000222000000000000000">
+Main points</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>New Convolutional Restricted Boltzmann Machine (C-RBM)
+</LI>
+<LI>Comparable state-of-the-art on handwritten digit recognition and pedestrian detection
+</LI>
+<LI>RBM
+    
+<UL>
+<LI>Probabilistic model
+</LI>
+<LI>hidden variables independent given observerd data
+</LI>
+<LI>Not capture explicitly spacial structure of images
+    
+</LI>
+</UL>
+</LI>
+<LI>C-RBM
+    
+<UL>
+<LI>Include spatial locality and weight sharing
+</LI>
+<LI>Favors filters with high response on training images
+</LI>
+<LI>Unsupervised learning using Contrastive Divergence
+</LI>
+<LI>Layerwise training for stacks of RBMs
+</LI>
+<LI>Convolutional connections are employed in a generative Markov Random Field architecture
+</LI>
+<LI>Hidden units divided into K feature maps
+</LI>
+<LI>Convolution problems
+        
+<UL>
+<LI>Boundary units are withinb a smaller number of subwindows compared to the interior pixels
+</LI>
+<LI>middle pixels may contribute to  features
+</LI>
+<LI>Separation of boundary variables () from middle variables ()
+</LI>
+<LI>Problems sampling from boundary pixels (not have nough features)
+</LI>
+<LI>Over completeness because of K-features
+</LI>
+<LI>Sampling creates images very similar to the original ones
+</LI>
+<LI>Need of more Gibbs sampling steps
+</LI>
+<LI>Their solution is to fix hidden bias terms  during training
+        
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>Multilayer C-RBMs
+    
+<UL>
+<LI>Subsampling takes maximum conditional feature probability over non-overlapping subwindows of feature maps
+</LI>
+<LI>Architecture
+        
+<UL>
+<LI>discriminative layer (SVM)
+</LI>
+<LI>max pooling
+</LI>
+<LI>convolution
+</LI>
+<LI>max pooling
+</LI>
+<LI>convolution
+</LI>
+<LI>input
+        
+</LI>
+</UL>
+</LI>
+<LI>On pedestrians also HOG is used in discriminative layer
+    
+</LI>
+</UL>
+</LI>
+<LI>MNIST dataset
+    
+<UL>
+<LI>Discriminative layer with RBF kernel
+</LI>
+<LI>10 one-vs-rest binary SVMs
+</LI>
+<LI>1st layer 15 feature maps
+</LI>
+<LI>2nd layer 2x2 non-overlapping subwindos
+</LI>
+<LI>3rd layer 15 feature maps
+</LI>
+<LI>4th layer
+    
+</LI>
+</UL>
+</LI>
+<LI>Comparison with Large CNN
+    
+<UL>
+<LI>C-RBM is better when training is small
+    
+</LI>
+</UL>
+</LI>
+<LI>Pedestrian dataset
+    
+<UL>
+<LI>1st layer 7x7 15 feature maps
+</LI>
+<LI>2nd layer 4x4 subsampling
+</LI>
+<LI>3rd layer 15x5x5 30 feature maps
+</LI>
+<LI>4th layer 2x2 subsampling
+</LI>
+<LI>+ HOG
+</LI>
+<LI>Discriminative layer with linear kernel
+    
+</LI>
+</UL>
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html569"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html565"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html559"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html567"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html570"
+  HREF="node23.html">Evaluation of local spatio-temporal</A>
+<B> Up:</B> <A NAME="tex2html566"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html560"
+  HREF="node21.html">Learning Deep Architectures for</A>
+ &nbsp; <B>  <A NAME="tex2html568"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Miquel Perello Nieto
+2014-05-14
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,5 @@
+<!--#set var="root" value="/perellm1" -->
+<!--#set var="ics_type" value="personal" -->
+<!--#set var="ics_amenu_include" value="${root}/_group-amenu.shtml" -->
+<!--#set var="ics_maintainer" value="Miquel Perello Nieto" -->
+<!--#set var="ics_font_size" value="large" -->

@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Learning Deep Face Representation [9] </TITLE>
+<META NAME="description" CONTENT="Learning Deep Face Representation [9] ">
+<META NAME="keywords" CONTENT="summaries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summaries.css">
+
+<LINK REL="next" HREF="node52.html">
+<LINK REL="previous" HREF="node50.html">
+<LINK REL="up" HREF="summaries.html">
+<LINK REL="next" HREF="node52.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html963"
+  HREF="node52.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html959"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html953"
+  HREF="node50.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html961"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html964"
+  HREF="node52.html">Towards Real-Time Image Understanding</A>
+<B> Up:</B> <A NAME="tex2html960"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html954"
+  HREF="node50.html">OverFeat: Integrated Recognition, Localization</A>
+ &nbsp; <B>  <A NAME="tex2html962"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html965"
+  HREF="node51.html#SECTION000511000000000000000">Original Abstract</A>
+<LI><A NAME="tex2html966"
+  HREF="node51.html#SECTION000512000000000000000">Main points</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION000510000000000000000">
+Learning Deep Face Representation [<A
+ HREF="node55.html#Fan2014">9</A>] </A>
+</H1>
+
+<H2><A NAME="SECTION000511000000000000000">
+Original Abstract</A>
+</H2>
+
+<P>
+<I>
+Face representation is a crucial step of face recognition systems. An optimal face representation should be discriminative, robust, compact, and very easy-to-implement. While numerous hand-crafted and learning-based representations have been proposed, considerable room for improvement is still present. In this paper, we present a very easy-to-implement deep learning framework for face representation. Our method bases on a new structure of deep network (called Pyramid CNN). The proposed Pyramid CNN adopts a greedy-filter-and-down-sample operation, which enables the training procedure to be very fast and computation-efficient. In addition, the structure of Pyramid CNN can naturally incorporate feature sharing across multi-scale face representations, increasing the discriminative ability of resulting representation. Our basic network is capable of achieving high recognition accuracy (85.8</I>
+
+<H2><A NAME="SECTION000512000000000000000">
+Main points</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>New deep structure Pyramid CNN
+</LI>
+<LI>Labeled Faces in the Wild (LFW)
+    
+<UL>
+<LI> faces
+</LI>
+<LI>1680 of the people have two or more distinct photos
+</LI>
+<LI>Detected by Viola-Jones detector
+</LI>
+<LI>http://vis-www.cs.umass.edu/lfw/
+    
+</LI>
+</UL>
+</LI>
+<LI>State-of-the-art performance on LFW benchmark ()
+
+<P>
+</LI>
+<LI>Good face representation
+    
+<UL>
+<LI>Identity-preserving: Same person pictures close in feature space
+</LI>
+<LI>Abstract and Compact: from high to low dimensionality
+</LI>
+<LI>Uniform and Automatic: NO hand-crafted and hard-wired parts
+    
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Pyramid CNN
+    
+<UL>
+<LI>ID-preserving Representation Learning: Loss functions measures
+        distance in output feature space
+</LI>
+<LI>Convolutions and Down-sampling
+</LI>
+<LI>Deeper give best results, but increases rapidly the training time
+</LI>
+<LI>Each CNN own private output layer and gets the input from the previous
+        shared layer
+</LI>
+<LI>Only the output of the last level network is used for the represetnation
+</LI>
+<LI>The rest of the outputs is just for training
+    
+</LI>
+</UL>
+</LI>
+<LI>Results
+    
+<UL>
+<LI>164 incorrect predictions
+</LI>
+<LI>Some of them are incorrectly labeled
+</LI>
+<LI>Others are very difficult for humans, because of the age or pose
+</LI>
+<LI>On LFW benchmark achieves state-of-the-art and close to human on croped images
+    
+</LI>
+</UL>
+</LI>
+<LI>With ROC curve as a mesure there is an improvement of 0.07-0.12 with Baseline
+</LI>
+<LI>Face recognition does not contemplate affine transformations or perspectives,
+</LI>
+<LI>Can be difficult to apply in task such as ImageNet, where the object can be
+    in any place and position
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html963"
+  HREF="node52.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html959"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html953"
+  HREF="node50.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html961"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html964"
+  HREF="node52.html">Towards Real-Time Image Understanding</A>
+<B> Up:</B> <A NAME="tex2html960"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html954"
+  HREF="node50.html">OverFeat: Integrated Recognition, Localization</A>
+ &nbsp; <B>  <A NAME="tex2html962"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Miquel Perello Nieto
+2014-05-14
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,217 @@
+This section contains a list of useful video datasets. These datasets and more
+about computer vision papers can be found in : <a
+    href="http://www.cvpapers.com/datasets.html">cvpapers</a>
+
+<p></p>
+
+<h3>Video classification USAA dataset</h3>
+
+<p>
+"The USAA dataset includes 8 different semantic class videos which are home
+videos of social occassions such e birthday party, graduation party,music
+performance, non-music performance, parade, wedding ceremony, wedding dance and
+wedding reception which feature activities of group of people. It contains
+around 100 videos for training and testing respectively. Each video is labeled
+by 69 attributes. The 69 attributes can be broken down into five broad classes:
+actions, objects, scenes, sounds, and camera movement.  It can be used for
+evaluating approaches for video classification,  N-shot and zero-shot learning,
+multi-task learning, attribute/concept-annotation, attribute/concepts-modality
+prediction, suprising attributes/concepts discovery, and
+latent-attribute(concepts) discovery etc."
+</p>
+
+<a style="color:red; cursor:pointer" onclick="toggle_more_info('usaa_dataset')"> [show more info] </a>
+<p/>
+<div id="usaa_dataset" class="more_info" style="display:none">
+<ul>
+    <li>8 classes</li>
+    <li>100 train</li>
+    <li>100 test</li>
+    <li>69 attributes (divided in 5 groups)
+    <ul>
+        <li>actions</li>
+        <li>objects</li>
+        <li>scenes</li>
+        <li>sounds</li>
+        <li>camera movement</li>
+    </ul>
+    </li>
+</ul>
+
+<p style="font-weight:bold">Example:</p>
+<p align="middle">
+<img width="100%" src="images/datasets/USAA_dataset_example.svg" alt="USAA_dataset_example">
+</p>
+</div>
+
+<p>
+[
+<a href="http://www.eecs.qmul.ac.uk/~yf300/USAA/download/">webpage</a>
+|
+<a href="http://www.eecs.qmul.ac.uk/~yf300/USAA/download/input.mat">download</a>
+]
+</p>
+
+<p></p>
+
+<h3>YouTube Faces</h3>
+
+<p>
+"The data set contains 3,425 videos of 1,595 different people. All the videos
+were downloaded from YouTube. An average of 2.15 videos are available for each
+subject. The shortest clip duration is 48 frames, the longest clip is 6,070
+frames, and the average length of a video clip is 181.3 frames."
+</p>
+
+<a style="color:red; cursor:pointer" onclick="toggle_more_info('youtube_faces_dataset')"> [show more info] </a>
+<p/>
+<div id="youtube_faces_dataset" class="more_info" style="display:none">
+<p style="font-weight:bold">Example:</p>
+<p align="middle">
+<img width="100%" src="images/datasets/youtube_faces_example.svg" alt="youtube_faces_dataset_example">
+</p>
+</div>
+
+<p>
+[
+<a href="http://www.cs.tau.ac.il/~wolf/ytfaces/">webpage</a>
+|
+<a href="ftp://agas.openu.ac.il//v/data9/cslab/wolftau/YouTubeFaces.tar.gz">download</a>
+]
+</p>
+
+<p></p>
+
+<h3>Hollywood-2 Human Actions and Scenes dataset</h3>
+
+<p>
+"Hollywood-2 datset contains 12 classes of human actions and 10 classes of
+scenes distributed over 3669 video clips and approximately 20.1 hours of video
+in total. The dataset intends to provide a comprehensive benchmark for human
+action recognition in realistic and challenging settings. The dataset is
+composed of video clips extracted from 69 movies, it contains approximately 150
+samples per action class and 130 samples per scene class in training and test
+subsets. A part of this dataset was originally used in the paper "Actions in
+Context", Marszałek et al. in Proc. CVPR'09. Hollywood-2 is an extension of the
+earlier Hollywood dataset."
+</p>
+
+<a style="color:red; cursor:pointer" onclick="toggle_more_info('hollywood2_dataset')"> [show more info] </a>
+<p/>
+<div id="hollywood2_dataset" class="more_info" style="display:none">
+<p style="font-weight:bold">Example:</p>
+<p align="middle">
+<img width="100%" src="images/datasets/hollywood2_example.svg" alt="hollywood2_dataset_example">
+</p>
+</div>
+
+<p>
+[
+<a href="http://www.di.ens.fr/~laptev/actions/">webpage</a>
+|
+<a href="http://lear.inrialpes.fr/people/marszalek/data/hoha/hollywood.tar.gz">download</a>
+]
+</p>
+
+<p></p>
+
+<h3>KTH - Recognition of Human Actions</h3>
+
+<p>
+"The current video database containing six types of human actions (walking,
+jogging, running, boxing, hand waving and hand clapping) performed several
+times by 25 subjects in four different scenarios: outdoors s1, outdoors with
+scale variation s2, outdoors with different clothes s3 and indoors s4 as
+illustrated below. Currently the database contains 2391 sequences. All
+sequences were taken over homogeneous backgrounds with a static camera with
+25fps frame rate. The sequences were downsampled to the spatial resolution of
+160x120 pixels and have a length of four seconds in average."
+</p>
+
+<a style="color:red; cursor:pointer" onclick="toggle_more_info('kth_dataset')"> [show more info] </a>
+<p/>
+<div id="kth_dataset" class="more_info" style="display:none">
+<p style="font-weight:bold">Example:</p>
+<p align="middle">
+<img width="100%" src="images/datasets/kth_example.svg" alt="kth_dataset_example">
+</p>
+</div>
+<p>
+[
+<a href="http://www.nada.kth.se/cvap/actions/">webpage</a>
+]
+</p>
+
+<p></p>
+
+<p></p>
+
+<h3>UCF101</h3>
+
+<p>
+UCF101 is an action recognition data set of realistic action videos, collected
+from YouTube, having 101 action categories. This data set is an extension of
+UCF50 data set which has 50 action categories.
+</p>
+<p>
+With 13320 videos from 101 action categories, UCF101 gives the largest
+diversity in terms of actions and with the presence of large variations in
+camera motion, object appearance and pose, object scale, viewpoint, cluttered
+background, illumination conditions, etc, it is the most challenging data set
+to date. As most of the available action recognition data sets are not
+realistic and are staged by actors, UCF101 aims to encourage further research
+into action recognition by learning and exploring new realistic action
+categories.
+
+[...]
+</p>
+
+<a style="color:red; cursor:pointer" onclick="toggle_more_info('ucf101_dataset')"> [show more info] </a>
+<p/>
+<div id="ucf101_dataset" class="more_info" style="display:none">
+<ul>
+    <li>101 actions</li>
+    <li>13320 clips</li>
+    <li>25 groups per action</li>
+    <li>4-7 clips per group</li>
+    <li>7.21 seconds on average</li>
+    <li>1600 minutes total</li>
+    <li>320x240 pixels</li>
+    <li>51 actions with audio</li>
+</ul>
+<p style="font-weight:bold">Example:</p>
+<p align="middle">
+<img width="100%" src="images/datasets/UCF101_example.jpg" alt="ucf101_dataset_example">
+</div>
+
+<p>
+[
+<a href="http://crcv.ucf.edu/data/UCF101.php">webpage</a>
+|
+<a href="http://crcv.ucf.edu/data/UCF101/UCF101.rar">download</a>
+]
+</p>
+
+<p></p>
+
+
+<!--
+<p></p>
+
+<h3></h3>
+
+<p>
+
+</p>
+
+<p>
+[
+<a href="">webpage</a>
+|
+<a href="">download</a>
+]
+</p>
+
+<p></p>
+
+-->

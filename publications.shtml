@@ -1,0 +1,40 @@
+<!--#set var="ics_type" value="personal" -->
+<!--#include virtual="_group-preamble.shtml" -->
+<!--#set var="ics_title" value="Miquel Perello Nieto" -->
+<!--#set var="ics_maintainer" value="Miquel Perello Nieto" -->
+<!--#set var="ics_am_current_item" value="Publications" -->
+<!--#set var="ics_aside_img_src" value="/style/2010/core/ics_aside_4.jpg" -->
+<!--#set var="ics_font_size" value="large" -->
+<!--#include virtual="/style/2010/ics_header.shtml" -->
+
+<h2></h2>
+<p>M.Sc. (Tech.), Researcher</p>
+
+<!-- Definition list:
+<dl>
+<dt>Term 1</dt>
+   <dd>Term 1 definition</dd>
+<dt>Term 2</dt>
+   <dd>Term 2 definition</dd>
+</dl>
+-->
+
+<dl>
+<dt>Office:</dt>
+	<dd>
+        Room ----- in Computer Science Building,<br>
+        Konemiehentie 2, Otaniemi campus area, Espoo
+        </dd>
+<dt>Postal Address:</dt>
+	<dd>
+	Aalto University School of Science,<br> 
+	Department of Information and Computer Science,<br> 
+	P.O. Box -----, FI-00076 Aalto, Finland
+	</dd>
+<dt>Telephone:</dt>
+	<dd>+358 </dd>
+<dt>Email:</dt>
+	<dd>firstname dot lastnames at aalto dot fi</dd>
+</dl>
+
+<!--#include virtual="/style/2010/ics_footer.shtml" -->

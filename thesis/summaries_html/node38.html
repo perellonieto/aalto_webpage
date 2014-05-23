@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Improving neural networks by preventing co-adaptation of feature detectors [16] </TITLE>
+<META NAME="description" CONTENT="Improving neural networks by preventing co-adaptation of feature detectors [16] ">
+<META NAME="keywords" CONTENT="summaries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summaries.css">
+
+<LINK REL="next" HREF="node39.html">
+<LINK REL="previous" HREF="node37.html">
+<LINK REL="up" HREF="summaries.html">
+<LINK REL="next" HREF="node39.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html786"
+  HREF="node39.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html782"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html776"
+  HREF="node37.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html784"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html787"
+  HREF="node39.html">Recognizing 50 human action</A>
+<B> Up:</B> <A NAME="tex2html783"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html777"
+  HREF="node37.html">The Stanford / Technicolor</A>
+ &nbsp; <B>  <A NAME="tex2html785"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html788"
+  HREF="node38.html#SECTION000381000000000000000">Original Abstract</A>
+<LI><A NAME="tex2html789"
+  HREF="node38.html#SECTION000382000000000000000">Main points</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION000380000000000000000">
+Improving neural networks by preventing co-adaptation of feature detectors [<A
+ HREF="node55.html#Hinton2012">16</A>] </A>
+</H1>
+
+<H2><A NAME="SECTION000381000000000000000">
+Original Abstract</A>
+</H2>
+
+<P>
+<I>
+When a large feedforward neural network is trained on a small training set, it typically performs poorly on held-out test data. This "overfitting" is greatly reduced by randomly omitting half of the feature detectors on each training case. This prevents complex co-adaptations in which a feature detector is only helpful in the context of several other specific feature detectors. Instead, each neuron learns to detect a feature that is generally helpful for producing the correct answer given the combinatorially large variety of internal contexts in which it must operate. Random "dropout" gives big improvements on many benchmark tasks and sets new records for speech and object recognition.
+</I>
+
+<H2><A NAME="SECTION000382000000000000000">
+Main points</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>Paper about Dropout
+</LI>
+<LI>Standard way to reduce test error
+    
+<UL>
+<LI>averaging different models
+</LI>
+<LI>Computationally expensive in training and test
+    
+</LI>
+</UL>
+</LI>
+<LI>Dropout
+    
+<UL>
+<LI>Small training set
+</LI>
+<LI>Prevents ``overfitting''
+</LI>
+<LI>They use 
+</LI>
+<LI>Instead of L2 norm, they set an upper bound for each individual
+        neuron.
+</LI>
+<LI>Mean network : At test time divide all the outgoing weights
+        by 2 to compensate dropout
+</LI>
+<LI>Specific case
+        
+<UL>
+<LI>Single hidden layer network
+</LI>
+<LI>N hidden units
+</LI>
+<LI>``Softmax'' output
+</LI>
+<LI> dropout
+</LI>
+<LI>during test using mean network
+</LI>
+<LI>Exactly equivalent to taking the geometric mean of the
+            probability distributions over labels predicted by all 
+            possible networks
+        
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>Results
+    
+<UL>
+<LI>MNIST
+        
+<UL>
+<LI>No dropout : 160 errors
+</LI>
+<LI>Dropbout : 130 errors
+</LI>
+<LI>Dropout + rm random  pixels : 110 errors
+</LI>
+<LI>Deep Boltzmann machine : 88 errors
+</LI>
+<LI>+ Dropout : 79 errors
+
+<DIV ALIGN="CENTER"><A NAME="figures_Hinton2012_fig5"></A><A NAME="588"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2:</STRONG>
+<B>Visualization of features learned by first layer hidden units</B> left without dropout and right using dropout</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">    <IMG
+  WIDTH="617" HEIGHT="231" ALIGN="BOTTOM" BORDER="0"
+ SRC="./Hinton2012_fig5.png"
+ ALT="Image Hinton2012_fig5">
+    </DIV></TD></TR>
+</TABLE>
+</DIV>
+</LI>
+</UL>
+</LI>
+<LI>TIMIT
+        
+<UL>
+<LI>4 Fully-connected hidden layers 4000 units per layer
+</LI>
+<LI>+ 185 ``softmax'' output units
+</LI>
+<LI>Without dropout : 
+</LI>
+<LI>Dropout on hidden units : 
+</LI>
+</UL>
+</LI>
+<LI>CIFAR-10
+        
+<UL>
+<LI>Best published : 
+</LI>
+<LI>3 Conv+Max-pool 1 Fully : 
+</LI>
+<LI>+ Dropout in last hidden layer : 
+</LI>
+</UL>
+</LI>
+<LI>ImageNet
+        
+<UL>
+<LI>Average of 6 separate models : 
+</LI>
+<LI>state-of-the-art : 
+</LI>
+<LI>5 Conv+Max-pool
+</LI>
+<LI>+ 2 Fully
+</LI>
+<LI>+ 1000 ``softmax''
+</LI>
+<LI>Without dropout : 
+</LI>
+<LI>Dropout in the 6th : 
+</LI>
+</UL>
+</LI>
+<LI>Reuters
+        
+<UL>
+<LI>2 fully of 2000 hidden units
+</LI>
+<LI>Without dropout : 
+</LI>
+<LI>Dropout : 
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html786"
+  HREF="node39.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html782"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html776"
+  HREF="node37.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html784"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html787"
+  HREF="node39.html">Recognizing 50 human action</A>
+<B> Up:</B> <A NAME="tex2html783"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html777"
+  HREF="node37.html">The Stanford / Technicolor</A>
+ &nbsp; <B>  <A NAME="tex2html785"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Miquel Perello Nieto
+2014-05-14
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,313 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ImageNet Classification with Deep Convolutional Neural Networks [26] </TITLE>
+<META NAME="description" CONTENT="ImageNet Classification with Deep Convolutional Neural Networks [26] ">
+<META NAME="keywords" CONTENT="summaries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summaries.css">
+
+<LINK REL="next" HREF="node37.html">
+<LINK REL="previous" HREF="node35.html">
+<LINK REL="up" HREF="summaries.html">
+<LINK REL="next" HREF="node37.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html758"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html754"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html748"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html756"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html759"
+  HREF="node37.html">The Stanford / Technicolor</A>
+<B> Up:</B> <A NAME="tex2html755"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html749"
+  HREF="node35.html">Gated boltzmann machine in</A>
+ &nbsp; <B>  <A NAME="tex2html757"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html760"
+  HREF="node36.html#SECTION000361000000000000000">Original Abstract</A>
+<LI><A NAME="tex2html761"
+  HREF="node36.html#SECTION000362000000000000000">Main points</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION000360000000000000000">
+ImageNet Classification with Deep Convolutional Neural Networks [<A
+ HREF="node55.html#Krizhevsky2012">26</A>] </A>
+</H1>
+
+<H2><A NAME="SECTION000361000000000000000">
+Original Abstract</A>
+</H2>
+
+<P>
+<I>
+We trained a large, deep convolutional neural network to classify the 1.2 millionhigh-resolution images in the ImageNet LSVRC-2010 contest into the 1000 dif-ferent classes. On the test data, we achieved top-1 and top-5 error rates of 37.5</I>
+
+<H2><A NAME="SECTION000362000000000000000">
+Main points</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>CNN architecture:
+    
+<UL>
+<LI>650.000 neurons (60 million parameters)
+</LI>
+<LI>5 convolutional layers
+</LI>
+<LI>Some of them followed by a max-pooling layer
+</LI>
+<LI>3 fully-connected layers
+</LI>
+<LI>1 1000-way softmax
+    
+</LI>
+</UL>
+</LI>
+<LI>Dropout regularization method to reduce overfitting in 3 fully-connected layers
+</LI>
+<LI>Training time: 5-6 days on two GTX 580 3GB GPUs
+</LI>
+<LI>Dataset:
+    
+<UL>
+<LI>ILSVRC-2010
+</LI>
+<LI>Down-sampled images to a fixed resolution of 256x256
+</LI>
+<LI>Substract the mean activity ofver training set from each pixel
+    
+</LI>
+</UL>
+</LI>
+<LI>ReLU:
+  
+<UL>
+<LI><!-- MATH
+ $f(x) = \max(0,x)$
+ -->
+</LI>
+<LI>Faster than tanh
+</LI>
+<LI>ReLU: 6 epochs
+</LI>
+<LI>tanh: 36 more epochs to achieve same performance
+  
+</LI>
+</UL>
+</LI>
+<LI>Local Response Normalization
+    
+<UL>
+<LI> and  error reduction
+</LI>
+<LI>Helps generalization
+</LI>
+<LI><!-- MATH
+ $b_{x,y}^i = a_{x,y}^i / \left( k + \alpha \sum\limits_{j=\max(0,i-n/2)}^{\min(N-1,i+n/2)}
+        (a_{x,y}^j)^2 \right)^\beta$
+ -->
+</LI>
+<LI><!-- MATH
+ $k=2, n=5, \alpha=10^-4$
+ -->
+, and <!-- MATH
+ $\beta=0.75$
+ -->
+</LI>
+</UL>
+</LI>
+<LI>Overlapping Pooling
+    
+<UL>
+<LI> and  error reduction
+</LI>
+<LI>grid 
+</LI>
+<LI>stride = 2
+</LI>
+<LI>Overlap each pooling one column pixel
+    
+</LI>
+</UL>
+</LI>
+<LI>Overall Architecture
+    
+<UL>
+<LI>224x224x3 (RGB image)
+</LI>
+<LI>Conv 96 kernels of size 11x11x3 with stride of 4 pixels
+</LI>
+<LI>Response-Normalized and max-pooling
+</LI>
+<LI>Conv 256 kernels of size 5x5x48 with stride of ? pixels
+</LI>
+<LI>Response-Normalized and max-pooling
+</LI>
+<LI>Conv 384 kernels of size 3x3x256
+</LI>
+<LI>Conv 384 kernels of size 3x3x192
+</LI>
+<LI>Conv 256 kernels of size 3x3x192
+</LI>
+<LI>¿Response-Normalized? and Max-pooling
+</LI>
+<LI>Fully connected 4096
+</LI>
+<LI>Fully connected 4096
+</LI>
+<LI>Fully connected 1000
+</LI>
+<LI>Softmax
+    
+</LI>
+</UL>
+
+<DIV ALIGN="CENTER"><A NAME="figures_krizhevsky2012_convnet.pdf"></A><A NAME="582"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+<B>Architecture of the CNN</B> </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">    
+    </DIV></TD></TR>
+</TABLE>
+</DIV>
+
+</LI>
+<LI>Data augmentation
+    
+<UL>
+<LI> error reduction
+</LI>
+<LI>Original images escaled scaled and croped to 256x256
+</LI>
+<LI>Extract 5 images of 224x224 from corners plus center
+</LI>
+<LI>Mirror horizontally and get 5 more images
+</LI>
+<LI>Augment data altering RGB channels:
+        
+<UL>
+<LI>Perform PCA on RGB throughout the training set
+</LI>
+<LI>Each training image add multiples of PCs with gaussian noise
+        
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>Dropout
+    
+<UL>
+<LI>Put to zero the output of neurons with probability 0.5
+</LI>
+<LI>At test time multiply the outputs by 0.5
+</LI>
+<LI>Two first fully-connected layers
+</LI>
+<LI>Solves overfitting
+</LI>
+<LI>Dobules the number of iterations required to ocnverge
+    
+</LI>
+</UL>
+</LI>
+<LI>Details of learning
+    
+<UL>
+<LI>batch size = 128
+</LI>
+<LI>momentum 0.9
+</LI>
+<LI>weight decay 0.0005
+</LI>
+<LI>Initial weights from zero-mean Gaussian std=0.01
+</LI>
+<LI>biases = 1 on second, fourth, fifth Conv and fully-connected
+</LI>
+<LI>biases = 0 on the rest
+    
+</LI>
+</UL>
+</LI>
+<LI>Evaluation
+    
+<UL>
+<LI>Consider the feature activations induced by an image at the last, 4096-dimensional hidden layer
+    
+</LI>
+</UL>
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html758"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html754"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html748"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html756"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html759"
+  HREF="node37.html">The Stanford / Technicolor</A>
+<B> Up:</B> <A NAME="tex2html755"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html749"
+  HREF="node35.html">Gated boltzmann machine in</A>
+ &nbsp; <B>  <A NAME="tex2html757"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Miquel Perello Nieto
+2014-05-14
+</ADDRESS>
+</BODY>
+</HTML>

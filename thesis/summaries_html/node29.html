@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Convolutional Deep Belief Networks on CIFAR-10 [25] </TITLE>
+<META NAME="description" CONTENT="Convolutional Deep Belief Networks on CIFAR-10 [25] ">
+<META NAME="keywords" CONTENT="summaries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summaries.css">
+
+<LINK REL="next" HREF="node30.html">
+<LINK REL="previous" HREF="node28.html">
+<LINK REL="up" HREF="summaries.html">
+<LINK REL="next" HREF="node30.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html663"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html659"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html653"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html661"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html664"
+  HREF="node30.html">Tiled convolutional neural networks.</A>
+<B> Up:</B> <A NAME="tex2html660"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html654"
+  HREF="node28.html">Why does unsupervised pre-training</A>
+ &nbsp; <B>  <A NAME="tex2html662"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html665"
+  HREF="node29.html#SECTION000291000000000000000">Original Abstract</A>
+<LI><A NAME="tex2html666"
+  HREF="node29.html#SECTION000292000000000000000">Main points</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION000290000000000000000">
+Convolutional Deep Belief Networks on CIFAR-10 [<A
+ HREF="node55.html#Krizhevsky2010">25</A>] </A>
+</H1>
+
+<H2><A NAME="SECTION000291000000000000000">
+Original Abstract</A>
+</H2>
+
+<P>
+<I>
+We describe how to train a two-layer convolutional Deep Belief Network (DBN) on the 1.6 million tiny imagesdataset.When training a convolutional DBN, one must decide what to do with the edge pixels of teh images. Asthe pixels near the edge of an image contribute to the fewest convolutional filter outputs, the model maysee it fit to tailor its few convolutional filters to better model the edge pixels. This is undesirable becaue itusually comes at the expense of a good model for the interior parts of the image. We investigate several waysof dealing with the edge pixels when training a convolutional DBN. Using a combination of locally-connectedconvolutional units and globally-connected units, as well as a few tricks to reduce the effects of overfitting,we achieve state-of-the-art performance in the classification task of the CIFAR-10 subset of the tiny imagesdataset.
+</I>
+
+<H2><A NAME="SECTION000292000000000000000">
+Main points</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>Detectors
+    
+<UL>
+<LI>Harris3D
+</LI>
+<LI>Cuboid
+</LI>
+<LI>Hessian
+</LI>
+<LI>Dense sampling
+    
+</LI>
+</UL>
+</LI>
+<LI>Descriptors
+    
+<UL>
+<LI>HOG/HOF
+</LI>
+<LI>HOG3D
+</LI>
+<LI>ESURF (extended SURF)
+    
+</LI>
+</UL>
+</LI>
+<LI>Datasets
+    
+<UL>
+<LI>KTH actions
+        
+<UL>
+<LI>6 human action classes
+</LI>
+<LI>walking, jogging, running, boxing, waving and clapping
+</LI>
+<LI>25 subjects
+</LI>
+<LI>4 scenarios
+</LI>
+<LI>2391 video samples
+</LI>
+<LI><!-- MATH
+ $http://www.nada.kth.se/cvap/actions/$
+ -->
+</LI>
+</UL>
+</LI>
+<LI>UCF sport actions
+        
+<UL>
+<LI>10 human action classes
+</LI>
+<LI>winging, diving, kicking, weight-lifting, horse-riding,
+            running, skateboarding, swinging, golf swinging and walking
+</LI>
+<LI>150 video samples
+</LI>
+<LI><!-- MATH
+ $http://crcv.ucf.edu/data/UCF_Sports_Action.php$
+ -->
+</LI>
+</UL>
+</LI>
+<LI>Hollywood2 actions
+        
+<UL>
+<LI>12 action classes
+</LI>
+<LI>answering the hone, driving car, eating, fighting,
+            geting out of the car, hand shaking, hugging, kissing,
+            running, sitting down, sitting up, and standing up.
+</LI>
+<LI>69 Hollywood movies
+</LI>
+<LI>1707 video samples
+</LI>
+<LI><!-- MATH
+ $http://www.di.ens.fr/~laptev/actions/hollywood2/$
+ -->
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html663"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html659"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html653"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html661"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html664"
+  HREF="node30.html">Tiled convolutional neural networks.</A>
+<B> Up:</B> <A NAME="tex2html660"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html654"
+  HREF="node28.html">Why does unsupervised pre-training</A>
+ &nbsp; <B>  <A NAME="tex2html662"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Miquel Perello Nieto
+2014-05-14
+</ADDRESS>
+</BODY>
+</HTML>

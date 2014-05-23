@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Evaluation of local spatio-temporal features for action recognition [49] </TITLE>
+<META NAME="description" CONTENT="Evaluation of local spatio-temporal features for action recognition [49] ">
+<META NAME="keywords" CONTENT="summaries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summaries.css">
+
+<LINK REL="next" HREF="node24.html">
+<LINK REL="previous" HREF="node22.html">
+<LINK REL="up" HREF="summaries.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html583"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html579"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html573"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html581"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html584"
+  HREF="node24.html">Actions in context [35]</A>
+<B> Up:</B> <A NAME="tex2html580"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html574"
+  HREF="node22.html">Stacks of convolutional restricted</A>
+ &nbsp; <B>  <A NAME="tex2html582"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html585"
+  HREF="node23.html#SECTION000231000000000000000">Original Abstract</A>
+<LI><A NAME="tex2html586"
+  HREF="node23.html#SECTION000232000000000000000">Main points</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION000230000000000000000">
+Evaluation of local spatio-temporal features for action recognition [<A
+ HREF="node55.html#Wang2009">49</A>] </A>
+</H1>
+
+<H2><A NAME="SECTION000231000000000000000">
+Original Abstract</A>
+</H2>
+
+<P>
+<I>
+Local space-time features have recently become a popular video representation for action recognition. Several methods for feature localization and description have been proposed in the literature and promising recognition results were demonstrated for a number of action classes. The comparison of existing methods, however, is often limited given the different experimental settings used. The purpose of this paper is to evaluate and compare previously proposed space-time features in a common experimental setup. In particular, we consider four different feature detectors and six local feature descriptors and use a standard bag-of-features SVM approach for action recognition. We investigate the performance of these methods on a total of 25 action classes distributed over three datasets with varying difficulty. Among interesting conclusions, we demonstrate that regular sampling of space-time features consistently outperforms all tested space-time interest point detectors for human actions in realistic settings. We also demonstrate a consistent ranking for the majority of methods over different datasets and discuss their advantages and limitations.
+</I>
+
+<H2><A NAME="SECTION000232000000000000000">
+Main points</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>Detectors
+    
+<UL>
+<LI>Harris3D
+</LI>
+<LI>Cuboid
+</LI>
+<LI>Hessian
+</LI>
+<LI>Dense sampling
+    
+</LI>
+</UL>
+</LI>
+<LI>Descriptors
+    
+<UL>
+<LI>HOG/HOF
+</LI>
+<LI>HOG3D
+</LI>
+<LI>ESURF (extended SURF)
+    
+</LI>
+</UL>
+</LI>
+<LI>Datasets
+    
+<UL>
+<LI>KTH actions
+        
+<UL>
+<LI>6 human action classes
+</LI>
+<LI>walking, jogging, running, boxing, waving and clapping
+</LI>
+<LI>25 subjects
+</LI>
+<LI>4 scenarios
+</LI>
+<LI>2391 video samples
+</LI>
+<LI><TT><A NAME="tex2html2"
+  HREF="http://www.nada.kth.se/cvap/actions/">http://www.nada.kth.se/cvap/actions/</A></TT>
+</LI>
+</UL>
+</LI>
+<LI>UCF sport actions
+        
+<UL>
+<LI>10 human action classes
+</LI>
+<LI>winging, diving, kicking, weight-lifting, horse-riding,
+            running, skateboarding, swinging, golf swinging and walking
+</LI>
+<LI>150 video samples
+</LI>
+<LI><TT><A NAME="tex2html3"
+  HREF="http://crcv.ucf.edu/data/UCF_Sports_Action.php">http://crcv.ucf.edu/data/UCF_Sports_Action.php</A></TT>
+</LI>
+</UL>
+</LI>
+<LI>Hollywood2 actions
+        
+<UL>
+<LI>12 action classes
+</LI>
+<LI>answering the hone, driving car, eating, fighting,
+            geting out of the car, hand shaking, hugging, kissing,
+            running, sitting down, sitting up, and standing up.
+</LI>
+<LI>69 Hollywood movies
+</LI>
+<LI>1707 video samples
+</LI>
+<LI><TT><A NAME="tex2html4"
+  HREF="http://www.di.ens.fr/~laptev/actions/hollywood2/">http://www.di.ens.fr/~laptev/actions/hollywood2/</A></TT>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html583"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html579"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html573"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html581"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html584"
+  HREF="node24.html">Actions in context [35]</A>
+<B> Up:</B> <A NAME="tex2html580"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html574"
+  HREF="node22.html">Stacks of convolutional restricted</A>
+ &nbsp; <B>  <A NAME="tex2html582"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Miquel Perello Nieto
+2014-05-14
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Large-scale Video Classification with Convolutional Neural Networks [22] </TITLE>
+<META NAME="description" CONTENT="Large-scale Video Classification with Convolutional Neural Networks [22] ">
+<META NAME="keywords" CONTENT="summaries">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summaries.css">
+
+<LINK REL="next" HREF="node55.html">
+<LINK REL="previous" HREF="node53.html">
+<LINK REL="up" HREF="summaries.html">
+<LINK REL="next" HREF="node55.html">
+</HEAD>
+
+<BODY text="#000000" bgcolor="#FFFFFF">
+<!--Navigation Panel-->
+<A NAME="tex2html1003"
+  HREF="node55.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html999"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html993"
+  HREF="node53.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html1001"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1004"
+  HREF="node55.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html1000"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html994"
+  HREF="node53.html">Spectral Networks and Deep</A>
+ &nbsp; <B>  <A NAME="tex2html1002"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html1005"
+  HREF="node54.html#SECTION000541000000000000000">Original Abstract</A>
+<LI><A NAME="tex2html1006"
+  HREF="node54.html#SECTION000542000000000000000">Main points</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION000540000000000000000">
+Large-scale Video Classification with Convolutional Neural Networks [<A
+ HREF="node55.html#Karpathy">22</A>] </A>
+</H1>
+
+<H2><A NAME="SECTION000541000000000000000">
+Original Abstract</A>
+</H2>
+
+<P>
+<I>
+Convolutional Neural Networks (CNNs) have been es-tablished as a powerful class of models for image recog-nition problems. Encouraged by these results, we pro-vide an extensive empirical evaluation of CNNs on large- scale video classification using a new dataset of 1 millionYouTube videos belonging to 487 classes. We study mul-tiple approaches for extending the connectivity of a CNNin time domain to take advantage of local spatio-temporalinformation and suggest a multiresolution, foveated archi-tecture as a promising way of speeding up the training.Our best spatio-temporal networks display significant per-formance improvements compared to strong feature-basedbaselines (55.3</I>
+
+<H2><A NAME="SECTION000542000000000000000">
+Main points</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>Compare different CNN architectures for video classification
+</LI>
+<LI>Create a new dataset with 1 million of YouTube sport videos and 487 classes
+</LI>
+<LI>They required one month of training
+</LI>
+<LI>Multiresolution CNNs: New CNN with low resolution context and high resolution center
+      
+<UL>
+<LI>Context stream: seems to learn color filters
+</LI>
+<LI>Fovea stream: learns grayscale features
+      
+</LI>
+</UL>
+</LI>
+<LI>Compare with and without pretraining on other dataset UCF-101
+</LI>
+<LI>Architectures (increasing spatio-temporal relations)
+      
+<UL>
+<LI>Single frame: Classify with one single shot
+</LI>
+<LI>Late Fusion: Classify with separate-in-time shots
+</LI>
+<LI>Early Fusion: Classify with adjacent shots merging on first convolution layer
+</LI>
+<LI>Slow Fusion: Classify with adjacent shots progressively mergin in upper layers
+      
+</LI>
+</UL>
+</LI>
+<LI>Results (best models):
+      
+<UL>
+<LI>clip Hit, Video Hit, Video Hit top5
+</LI>
+<LI>42.4 60.0 78.5 Single-Frame + Multiresolution
+</LI>
+<LI>41.9 60.9 80.2 Slow Fusion
+      
+</LI>
+</UL>
+</LI>
+<LI>Results on UCF-101 with pretraining:
+      
+<UL>
+<LI>41.3 No pretraining
+</LI>
+<LI>64.1 Fine-tune top layer
+</LI>
+<LI>65.4 Fine-tune top 3 layers
+</LI>
+<LI>62.2 Fine-tune all layers
+      
+</LI>
+</UL>
+</LI>
+<LI>Conclusions:
+      
+<UL>
+<LI>From video classification can be derived that camera movements
+          deteriorate the predictions
+</LI>
+<LI>Single frame gives very good results
+      
+</LI>
+</UL>
+</LI>
+<LI>Further work:
+      
+<UL>
+<LI>Apply some filter for camera movements
+</LI>
+<LI>Explore RNN from clip-level into video-level
+      
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1003"
+  HREF="node55.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/next.gif"></A> 
+<A NAME="tex2html999"
+  HREF="summaries.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/up.gif"></A> 
+<A NAME="tex2html993"
+  HREF="node53.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/prev.gif"></A> 
+<A NAME="tex2html1001"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="https://users.ics.aalto.fi/perellm1/images/icons/contents.gif"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1004"
+  HREF="node55.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html1000"
+  HREF="summaries.html">Summary of References Related</A>
+<B> Previous:</B> <A NAME="tex2html994"
+  HREF="node53.html">Spectral Networks and Deep</A>
+ &nbsp; <B>  <A NAME="tex2html1002"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Miquel Perello Nieto
+2014-05-14
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<!--#set var="ics_type" value="personal" -->
+<!--#set var="root" value="/perellm1" -->
+<!--#set var="thesis" value="${root}/thesis" -->
+<!--#include virtual="${root}/_group-preamble.shtml" -->
+<!--#set var="ics_title" value="Miquel Perello Nieto" -->
+<!--#set var="ics_maintainer" value="Miquel Perello Nieto" -->
+<!--#set var="ics_am_current_item" value="Thesis" -->
+<!--#set var="ics_aside_img_src" value="${root}/images/cnn/neocognitron_fuk_1980.png" -->
+<!--#set var="ics_aside_include" value="${root}/_aside_include.html" -->
+<!--#set var="ics_font_size" value="large" -->
+<!--#set var="ics_bm_1_item" value="Intro" -->
+<!--#set var="ics_bm_2_item" value="Video datasets" -->
+<!--#set var="ics_bm_3_item" value="CNN libraries" -->
+<!--#set var="ics_bm_4_item" value="CNN review" -->
+<!--#set var="ics_bm_5_item" value="References" -->
+<!--#include virtual="/style/2010/ics_header.shtml" -->
+
+<!--#include virtual="${thesis}/thesis.js" -->
+
+<h2><a name="Intro">On the use of Convolutional Neural Networks for Multimedia Event Detection</a></h2>
+
+<p></p>
+
+<h2><a name="Video datasets">Video datasets</a></h2>
+<!--#include virtual="${thesis}/datasets.html" -->
+
+<p></p>
+
+<h2><a name="CNN libraries">Comparison of CNN libraries</a></h2>
+<!--#include virtual="${thesis}/libraries.html" -->
+
+<p></p>
+
+<h2><a name="CNN review">References with abstract sorted by year</a></h2>
+<!--#include virtual="${thesis}/header_references_by_year.html" -->
+<!--#include virtual="${thesis}/references/references_by_year.html" -->
+
+<p></p>
+
+<h2>
+<a name="References">References</a>
+[<a href="thesis/references/references.bib">bib</a> |
+<a href="thesis/references/references_bib.html">html</a>]
+</h2>
+<!--#include virtual="${thesis}/references/references.html" -->
+
+<!--#include virtual="/style/2010/ics_footer.shtml" -->

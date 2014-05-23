@@ -1,0 +1,300 @@
+\begin{thebibliography}{10}
+
+\bibitem{Araujo}
+A~F~De Araujo, F~Silveira, H~Lakshman, J~Zepeda, A~Sheth, and B~Girod.
+\newblock {The Stanford / Technicolor / Fraunhofer HHI Video}.
+\newblock 2012.
+
+\bibitem{Bengio2009}
+Yoshua Bengio.
+\newblock {\em {Learning Deep Architectures for AI}}, volume~2.
+\newblock 2009.
+
+\bibitem{Bogovic2013}
+JA~Bogovic, GB~Huang, and Viren Jain.
+\newblock {Learned versus Hand-Designed Feature Representations for 3d
+  Agglomeration}.
+\newblock {\em arXiv preprint arXiv:1312.6159}, pages 1--14, 2013.
+
+\bibitem{Bruna2014}
+Joan Bruna, Arthur Szlam, Wojciech Zaremba, and Yann LeCun.
+\newblock {Spectral Networks and Deep Locally Connected Networks on Graphs}.
+\newblock pages 1--14, 2014.
+
+\bibitem{Callet2006}
+P~Le Callet.
+\newblock {A convolutional neural network approach for objective video quality
+  assessment}.
+\newblock {\em Neural Networks, IEEE \ldots}, 5:1316--1327, 2006.
+
+\bibitem{Ciresan2013}
+DC~Cireşan and Alessandro Giusti.
+\newblock {Mitosis detection in breast cancer histology images with deep neural
+  networks}.
+\newblock {\em Medical Image \ldots}, 2013.
+
+\bibitem{Eigen2013}
+David Eigen, Jason Rolfe, Rob Fergus, and Y~LeCun.
+\newblock {Understanding Deep Architectures using a Recursive Convolutional
+  Network}.
+\newblock {\em arXiv preprint arXiv:1312.1847}, pages 1--9, 2013.
+
+\bibitem{Erhan2010}
+D~Erhan, Yoshua Bengio, and Aaron Courville.
+\newblock {Why does unsupervised pre-training help deep learning?}
+\newblock {\em \ldots of Machine Learning \ldots}, 9(2007):201--208, 2010.
+
+\bibitem{Fan2014}
+Haoqiang Fan, Zhimin Cao, Yunin Jiang, Qi~Yin, C~Doudou, and Chinchilla Doudou.
+\newblock {Learning Deep Face Representation}.
+\newblock {\em arXiv preprint arXiv:1403.2802}, pages 1--10, 2014.
+
+\bibitem{Farabet2013}
+C~Farabet, Camille Couprie, Laurent Najman, and Y~LeCun.
+\newblock {Learning hierarchical features for scene labeling}.
+\newblock 8:1915--1929, 2012.
+
+\bibitem{Farabet2014}
+Cl\'{e}ment Farabet.
+\newblock {\em {Towards Real-Time Image Understanding with Convolutional
+  Networks}}.
+\newblock PhD thesis, Universit\'{e} Paris-Est, 2014.
+
+\bibitem{Fukushima1980}
+Kunihiko Fukushima.
+\newblock {Neocognitron: A Self-organizing Neural Network Model for a Mechanism
+  of Pattern Recognition Unaffected by Shift in Position}.
+\newblock 202, 1980.
+
+\bibitem{Hao2012}
+Tele Hao, Tapani Raiko, Alexander Ilin, and Juha Karhunen.
+\newblock {Gated boltzmann machine in texture modeling}.
+\newblock {\em \ldots Neural Networks and Machine \ldots}, 2012.
+
+\bibitem{Hinton2006a}
+GE~Hinton, Simon Osindero, and YW~Teh.
+\newblock {A fast learning algorithm for deep belief nets}.
+\newblock {\em Neural computation}, 2006.
+
+\bibitem{Hinton2006b}
+GE~Hinton and RR~Salakhutdinov.
+\newblock {Reducing the dimensionality of data with neural networks}.
+\newblock {\em Science}, 313(July):504--507, 2006.
+
+\bibitem{Hinton2012}
+GE~Hinton, N~Srivastava, Alex Krizhevsky, I~Sutskever, and RR~Salakhutdinov.
+\newblock {Improving neural networks by preventing co-adaptation of feature
+  detectors}.
+\newblock {\em arXiv preprint arXiv: \ldots}, pages 1--18, 2012.
+
+\bibitem{Hinton2007}
+Geoffrey Hinton.
+\newblock {To recognize shapes, first learn to generate images}.
+\newblock {\em Progress in brain research}, 2007.
+
+\bibitem{Hoyer2000}
+P~O Hoyer and a~Hyv\"{a}rinen.
+\newblock {Independent component analysis applied to feature extraction from
+  colour and stereo images.}
+\newblock {\em Network (Bristol, England)}, 11(3):191--210, August 2000.
+
+\bibitem{Hubel1962}
+DH~Hubel and TN~Wiesel.
+\newblock {Receptive fields, binocular interaction and functional architecture
+  in the cat's visual cortex}.
+\newblock {\em The Journal of physiology}, pages 106--154, 1962.
+
+\bibitem{Hubel1968}
+DH~Hubel and TN~Wiesel.
+\newblock {Receptive fields and functional architecture of monkey striate
+  cortex}.
+\newblock {\em The Journal of physiology}, pages 215--243, 1968.
+
+\bibitem{Hyvarinen2000}
+A~Hyv\"{a}rinen and Patrik Hoyer.
+\newblock {Emergence of phase-and shift-invariant features by decomposition of
+  natural images into independent feature subspaces}.
+\newblock {\em Neural computation}, 1720:1705--1720, 2000.
+
+\bibitem{Karpathy}
+Andrej Karpathy, G~Toderici, S~Shetty, Thomas Leung, Rahul Sukthankar, and
+  Li~Fei-Fei.
+\newblock {Large-scale Video Classification with Convolutional Neural
+  Networks}.
+\newblock {\em vision.stanford.edu}, 2014.
+
+\bibitem{Kavukcuoglu2010}
+Koray Kavukcuoglu, Pierre Sermanet, Y-lan Boureau, Yann LeCun, Karol Gregor,
+  and Micha\"{e}l Mathieu.
+\newblock {Learning Convolutional Feature Hierarchies for Visual Recognition}.
+\newblock {\em NIPS}, (1):1--9, 2010.
+
+\bibitem{King2002}
+JC~King.
+\newblock {Why color management?}
+\newblock {\em 9th Congress of the International Color \ldots}, 2002.
+
+\bibitem{Krizhevsky2010}
+Alex Krizhevsky.
+\newblock {Convolutional Deep Belief Networks on CIFAR-10}.
+\newblock pages 1--9, 2010.
+
+\bibitem{Krizhevsky2012}
+Alex Krizhevsky, I~Sutskever, and GE~Hinton.
+\newblock {ImageNet Classification with Deep Convolutional Neural Networks}.
+\newblock {\em NIPS}, pages 1--9, 2012.
+
+\bibitem{Le2011a}
+Quoc~V. Le, Will~Y. Zou, Serena~Y. Yeung, and Andrew~Y. Ng.
+\newblock {Learning hierarchical invariant spatio-temporal features for action
+  recognition with independent subspace analysis}.
+\newblock {\em Cvpr 2011}, pages 3361--3368, June 2011.
+
+\bibitem{Le2010}
+QV~Le, Jiquan Ngiam, Zhenghao Chen, DJ~hao Chia, and PW~Koh.
+\newblock {Tiled convolutional neural networks.}
+\newblock {\em NIPS}, pages 1--9, 2010.
+
+\bibitem{Le2011}
+QV~Le, MA~Ranzato, R~Monga, and Matthieu Devin.
+\newblock {Building high-level features using large scale unsupervised
+  learning}.
+\newblock {\em arXiv preprint arXiv: \ldots}, 2011.
+
+\bibitem{LeCun1989}
+Y~LeCun.
+\newblock {Generalization and network design strategies}.
+\newblock {\em Connections in Perspective. North-Holland, \ldots}, 1989.
+
+\bibitem{LeCun1995}
+Y~LeCun and Y~Bengio.
+\newblock {Convolutional networks for images, speech, and time series}.
+\newblock {\em \ldots handbook of brain theory and neural networks}, pages
+  1--14, 1995.
+
+\bibitem{LeCun1989a}
+Y~LeCun, B~Boser, JS~Denker, D~Henderson, RE~Howard, W~Hubbard, and LD~Jackel.
+\newblock {Backpropagation applied to handwritten zip code recognition}.
+\newblock {\em Neural \ldots}, 1989.
+
+\bibitem{LeCun1998}
+Y~LeCun and L~Bottou.
+\newblock {Gradient-based learning applied to document recognition}.
+\newblock {\em Proceedings of the \ldots}, 1998.
+
+\bibitem{Lee2009}
+Honglak Lee, Roger Grosse, Rajesh Ranganath, and Andrew~Y. Ng.
+\newblock {Convolutional deep belief networks for scalable unsupervised
+  learning of hierarchical representations}.
+\newblock {\em Proceedings of the 26th Annual International Conference on
+  Machine Learning - ICML '09}, pages 1--8, 2009.
+
+\bibitem{Marszalek2009}
+M~Marszalek, Ivan Laptev, and Cordelia Schmid.
+\newblock {Actions in context}.
+\newblock {\em Computer Vision and \ldots}, (i):2929--2936, 2009.
+
+\bibitem{Masci2011}
+Jonathan Masci, Ueli Meier, D~Cireşan, and J~Schmidhuber.
+\newblock {Stacked convolutional auto-encoders for hierarchical feature
+  extraction}.
+\newblock {\em Artificial Neural Networks \ldots}, pages 52--59, 2011.
+
+\bibitem{Ngiam2010}
+Jiquan Ngiam, Zhenghao Chen, Daniel Chia, Pan~Wei Koh, and Andrew~Y. Ng.
+\newblock {Tiled convolutional neural networks}.
+\newblock {\em Advances in Neural \ldots}, pages 1--9, 2010.
+
+\bibitem{Norouzi2009}
+Mohammad Norouzi, Mani Ranjbar, and Greg Mori.
+\newblock {Stacks of convolutional restricted Boltzmann machines for
+  shift-invariant feature learning}.
+\newblock {\em Computer Vision and Pattern \ldots}, pages 2735--2742, 2009.
+
+\bibitem{Oneata2013}
+D~Oneata, Jakob Verbeek, and C~Schmid.
+\newblock {Action and event recognition with Fisher vectors on a compact
+  feature set}.
+\newblock {\em \ldots Conference on Computer \ldots}, 2013.
+
+\bibitem{Over2013}
+Paul Over, George Awad, Jon Fiscus, and Greg Sanders.
+\newblock {TRECVID 2013 – An Introduction to the Goals , Tasks , Data ,
+  Evaluation Mechanisms , and Metrics}.
+\newblock 2013.
+
+\bibitem{Reddy2012}
+Kishore~K. Reddy and Mubarak Shah.
+\newblock {Recognizing 50 human action categories of web videos}.
+\newblock {\em Machine Vision and Applications}, 24(5):971--981, November 2012.
+
+\bibitem{Safadi2013}
+Bahjat Safadi, Nadia Derbas, Abdelkader Hamadi, Thi-thu-thuy Vuong, Han Dong,
+  Philippe Mulhem, and Georges Qu.
+\newblock {Quaero at TRECVid 2013 : Semantic Indexing}.
+\newblock 2013.
+
+\bibitem{Sermanet2014}
+Pierre Sermanet, David Eigen, X~Zhang, Michael Mathieu, Rob Fergus, and Yann
+  LeCun.
+\newblock {OverFeat: Integrated Recognition, Localization and Detection using
+  Convolutional Networks}.
+\newblock {\em arXiv preprint arXiv: \ldots}, pages 1--16, 2014.
+
+\bibitem{Serre2007}
+Thomas Serre, Lior Wolf, Stanley Bileschi, Maximilian Riesenhuber, and Tomaso
+  Poggio.
+\newblock {Robust object recognition with cortex-like mechanisms.}
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  29(3):411--26, March 2007.
+
+\bibitem{Simard2003}
+P~Simard, Dave Steinkraus, and JC~Platt.
+\newblock {Best Practices for Convolutional Neural Networks Applied to Visual
+  Document Analysis}.
+\newblock {\em ICDAR}, 2003.
+
+\bibitem{Simonyan2013}
+Karen Simonyan, A~Vedaldi, and A~Zisserman.
+\newblock {Deep Inside Convolutional Networks: Visualising Image Classification
+  Models and Saliency Maps}.
+\newblock {\em arXiv preprint arXiv:1312.6034}, pages 1--8, 2013.
+
+\bibitem{Snoek2013}
+CGM Snoek and KEA van~de Sande.
+\newblock {MediaMill at TRECVID 2013: Searching Concepts, Objects, Instances
+  and Events in Video}.
+\newblock {\em \ldots of TRECVID}, 2013.
+
+\bibitem{Taylor2010}
+GW~Taylor, Rob Fergus, Y~LeCun, and Christoph Bregler.
+\newblock {Convolutional learning of spatio-temporal features}.
+\newblock {\em Computer Vision–ECCV 2010}, 2010.
+
+\bibitem{Wang2009}
+Heng Wang, Muhammad~Muneeb Ullah, Alexander Klaser, Ivan Laptev, and Cordelia
+  Schmid.
+\newblock {Evaluation of local spatio-temporal features for action
+  recognition}.
+\newblock {\em Procedings of the British Machine Vision Conference 2009}, pages
+  124.1--124.11, 2009.
+
+\bibitem{Weston2008}
+Jason Weston, Fr\'{e}d\'{e}ric Ratle, and Ronan Collobert.
+\newblock {Deep learning via semi-supervised embedding}.
+\newblock {\em Proceedings of the 25th international conference on Machine
+  learning - ICML '08}, pages 1168--1175, 2008.
+
+\bibitem{Yang2013}
+Yang Yang, Guang Shu, and Mubarak Shah.
+\newblock {Semi-supervised Learning of Feature Hierarchies for Object Detection
+  in a Video}.
+\newblock {\em 2013 IEEE Conference on Computer Vision and Pattern
+  Recognition}, pages 1650--1657, June 2013.
+
+\bibitem{Zeiler2013}
+MD~Zeiler and Rob Fergus.
+\newblock {Visualizing and Understanding Convolutional Networks}.
+\newblock {\em arXiv preprint arXiv:1311.2901}, 2013.
+
+\end{thebibliography}

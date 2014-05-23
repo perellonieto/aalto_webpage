@@ -1,0 +1,52 @@
+<!--#set var="ics_am_heading" value="Miquel Perello Nieto" -->
+
+<!--#set var="root" value="/perellm1" -->
+
+<!--#set var="ics_am_0_item" value="Home" -->
+<!--#set var="ics_am_0_href" value="${root}/index.shtml" -->
+<!--#set var="ics_am_0_title" value="Home page of Miquel Perello Nieto" -->
+<!--#set var="ics_am_1_item" value="Thesis" -->
+<!--#set var="ics_am_1_href" value="${root}/thesis.shtml" -->
+<!--#set var="ics_am_1_title" value="Master thesis of Miquel Perello Nieto" -->
+<!--#set var="ics_am_2_item" value="Links" -->
+<!--#set var="ics_am_2_href" value="${root}/links.shtml" -->
+<!--#set var="ics_am_2_title" value="Miscallenous links" -->
+<!--#set var="ics_am_3_item" value="" -->
+<!--#set var="ics_am_3_href" value="" -->
+<!--#set var="ics_am_3_title" value="" -->
+<!--#set var="ics_am_4_item" value="" -->
+<!--#set var="ics_am_4_href" value="" -->
+<!--#set var="ics_am_4_title" value="" -->
+<!--#set var="ics_am_5_item" value="" -->
+<!--#set var="ics_am_5_href" value="" -->
+<!--#set var="ics_am_5_title" value="" -->
+<!--#set var="ics_am_6_item" value="" -->
+<!--#set var="ics_am_6_href" value="" -->
+<!--#set var="ics_am_6_title" value="" -->
+<!--#set var="ics_am_7_item" value="" -->
+<!--#set var="ics_am_7_href" value="" -->
+<!--#set var="ics_am_7_title" value="" -->
+<!--#set var="ics_am_8_item" value="" -->
+<!--#set var="ics_am_8_href" value="" -->
+<!--#set var="ics_am_8_title" value="" -->
+<!--#set var="ics_am_9_item" value="" -->
+<!--#set var="ics_am_9_href" value="" -->
+<!--#set var="ics_am_9_title" value="" -->
+<!--#set var="ics_am_10_item" value="" -->
+<!--#set var="ics_am_10_href" value="" -->
+<!--#set var="ics_am_10_title" value="" -->
+<!--#set var="ics_am_11_item" value="" -->
+<!--#set var="ics_am_11_href" value="" -->
+<!--#set var="ics_am_11_title" value="" -->
+<!--#set var="ics_am_12_item" value="" -->
+<!--#set var="ics_am_12_href" value="" -->
+<!--#set var="ics_am_12_title" value="" -->
+<!--#set var="ics_am_13_item" value="" -->
+<!--#set var="ics_am_13_href" value="" -->
+<!--#set var="ics_am_13_title" value="" -->
+<!--#set var="ics_am_14_item" value="" -->
+<!--#set var="ics_am_14_href" value="" -->
+<!--#set var="ics_am_14_title" value="" -->
+<!--#set var="ics_am_15_item" value="" -->
+<!--#set var="ics_am_15_href" value="" -->
+<!--#set var="ics_am_15_title" value="" -->
